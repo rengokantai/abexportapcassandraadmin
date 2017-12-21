@@ -28,3 +28,12 @@ user - nofile 100000
 user - nproc 32768
 user - as unimited
 ```
+
+
+#### Selecting the Nodes to Serve as Seed Nodes
+cassandra.yaml
+```
+seed_provider:
+  - class_name: 
+  - seeds: "192.168.1.1,192.168.1.3"
+```
