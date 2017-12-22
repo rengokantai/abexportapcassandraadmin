@@ -73,3 +73,14 @@ nodetool repair -full
 ```
 The write throughput of the cluster is inversely related to the replication factor
 ```
+
+### Preventing a Keyspace from Sending Replicas to Some Data Centers
+```
+alter keyspace cycle with replication ={'class':'NetworkTopologyStrategy','dc1':3,'dc2':0,'dc3':3};
+```
+
+### Removing a Keyspace
+```
+DROP KEYSPACE cycle;
+describe keyspaces;
+```
